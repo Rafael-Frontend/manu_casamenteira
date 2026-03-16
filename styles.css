@@ -41,7 +41,6 @@ nav.menu {
    width: 100%;
    height: auto;
    background: #FFFFFF;
-   border-top: 2px solid #dddddd;
    position: fixed;
    bottom: 0;
    left: 0;
@@ -61,23 +60,25 @@ nav.menu {
 }
 .menu ul li {
    background: transparent;
-   padding: 0.5rem 0 0.5rem;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   font-size: 0.8rem;
-   transition: 0.5s;
+   font-size: 0.5rem;
+   font-family: "Poppins", Sans-Serif;
+   transition: 0.4s;
+   gap: 0.1rem;
 }
 .menu ul a {
-   flex: 1 1 100%;
+   flex: 0 1 100%;
+   padding: 0.4rem 0 0;
    color: var(--title);
    margin: auto;
    cursor: pointer;
 }
 .menu ul a:hover { color: var(--title-alt); }
 
-.menu ul li i { font-size: 1.3rem; }
+.menu ul li i { font-size: 1rem; }
 
 main {
   background: #FFFFFF;
@@ -85,7 +86,7 @@ main {
   height: auto;
 }
 
-footer { width: 100dvw; height: auto; }
+footer { width: 100dvw; height: auto; margin-top: var(--space-3); }
 
 section {
   max-width: 700vw;
@@ -256,7 +257,7 @@ h3.s-title {
    font-size: 2rem;
    text-align: center;
    color: var(--title);
-   margin: var(--space-1) 0 var(--space-1);
+   margin: var(--space-1) 0 0;
    z-index: 3;
 }
 
@@ -280,6 +281,7 @@ section.s-sobre {
      background-image: url('./s-bg-1.jpeg');
   background-size: cover;
   background-position: center;
+  background: blue;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -288,6 +290,7 @@ section.s-sobre {
 }
 section.s-sobre::before {
   content: "";
+  border-radius: inherit;
   position: absolute;
   inset: 0;
   background: rgba(255,255,255,0.57);
@@ -335,26 +338,6 @@ div.ft-container {
    border-radius: 10px;
    z-index: 3;
 }
-
-section.s-sobre a {
-   padding: var(--space-1) var(--space-2);
-   text-align: center;
-   font-size: var(--space-2);
-   margin-top: var(--space-2);
-   background: #449354aa;
-   border-radius: var(--space-8);
-   color: var(--btn-fc);
-   transition: 0.4s;
-   cursor: pointer;
-   z-index: 3;
-}
-
-section.s-sobre a:hover {
-   background: #6b7a;
-   color: #f3f3f3;
-   transform: scale(1.1);
-}
-
 
 /* CONTEÚDO DA SEGUNDA SEÇÃO */
 
@@ -493,12 +476,6 @@ section.s-produtos {
        border: 3px solid var(--title);
        transition: 0.4s;
        cursor: pointer;
-    }
-    div.npb-container button:hover {
-       background: var(--title);
-       color: #FFFFFF;
-       border: 3px solid var(--title);
-       transform: scale(1.1);
     }
     div.npb-container button:disabled {
        opacity: 0.5;
@@ -925,7 +902,7 @@ footer div.fc-copyright p a:nth-child(2) {
       max-width: 100%;
       width: 100%;
       display: flex;
-      height: 55dvh;
+      height: 65dvh;
       flex-direction: row;
       align-items: center;
       justify-content: center;
@@ -953,10 +930,10 @@ footer div.fc-copyright p a:nth-child(2) {
       max-width: 100%;
       padding: var(--space-3);
       margin: 0;
-      background: transparent;
+      background: blue;
    }
    div.s-g-sobre p { max-width: 45ch; text-align: left; line-height: 1.8; background: rgba(255,255,255,0.50); backdrop-filter: blur(1px); border-radius:5px; padding: 10px;}
-   div.s-g-sobre h3.s-title { font-size: 2rem; text-align:left; padding: 0;
+   div.s-g-sobre h3.s-title { font-size: 1.8rem; text-align:left; padding: 0;
      margin-bottom: 0.3em; }
    
    section.s-sobre {
@@ -971,8 +948,9 @@ footer div.fc-copyright p a:nth-child(2) {
       display: flex;
       border-radius: none;
       gap: var(--space-1);
+      background: red;
    }
-   div.ft-container img { max-width: 260px; margin-bottom: 0.5em; background:transparent; border-radius: 0; border: 6px solid white; }
+   div.ft-container img { max-width: 260px; margin-bottom: 0.5em; border-radius: 0; border: 6px solid white; }
    
    div.ft-container h5 { font-size: 1.6rem; font-weight: 600; color: var(--title); font-family: "Poppins", Sans-Serif; }
    div.ft-container span { color: var(--title); font-size: 1rem; font-family: "Poppins", Sans-Serif;}
